@@ -140,7 +140,7 @@ void *btrack_new(t_symbol *s, long argc, t_atom *argv)
         x->beat_outlet = bangout(x);
         
         // initialise variables
-        x->should_output_beats = true;
+        x->should_output_beats = false;
         x->time_of_last_bang_ms = 0;
         x->count_in = 4;
         x->count_in_tempi[0] = 120;
