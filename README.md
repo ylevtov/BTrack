@@ -1,3 +1,5 @@
+This fork adds a Max For Live device. Original Readme below...
+
 BTrack - A Real-Time Beat Tracker
 =================================
 
