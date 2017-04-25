@@ -277,6 +277,9 @@ void BTrack::setTempo (double tempo)
 	
 	/////////// TEMPO INDICATION RESET //////////////////
 	
+    // make sure tempo is at least 1 bpm, lest we get stuck in a while loop forever...
+    tempo = std::max(tempo,1.0);
+    
 	// firstly make sure tempo is between 80 and 160 bpm..
 	while (tempo > 160)
 	{
@@ -340,7 +343,10 @@ void BTrack::setTempo (double tempo)
 
 //=======================================================================
 void BTrack::fixTempo (double tempo)
-{	
+{
+    // make sure tempo is at least 1 bpm, lest we get stuck in a while loop forever...
+    tempo = std::max(tempo,1.0);
+    
 	// firstly make sure tempo is between 80 and 160 bpm..
 	while (tempo > 160)
 	{
